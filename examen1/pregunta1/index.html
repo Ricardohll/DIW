@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejercicio 1</title>	
+</head>
+	
+<style>
+	*{margin: 0; padding: 0; border:0; box-sizing: border-box;}
+	.top{width:100%; background: #000; color: #fff; text-align:center; padding: 10px 20px}
+	.logo{width:100%; background: #fff; display: flex;  align-items: center;}
+	.el-logo{color: #fff; width:20%;}
+	.el-logo img{width:100%; padding: 30px;}
+	.etiqueta-h1{color: #000; width:80%; text-align: right; font-size:50px; padding: 10px 20px}
+	nav{background: #000; color: #fff; text-align: center; padding: 10px 20px;}
+	.banner1, .banner2{display: flex; height: 400px; width:15%; background-color: #858585; color:#FFF; align-items: center; justify-content: center; float: left;}
+	.banner2{background:#C6C6C6;}
+	.oculto{display: none;}
+	.contenido{display:flex; height: 400px; width:70%; background-color:#C2C2C2; color:#FFF; align-items: center; justify-content: center; float: left;}
+	footer{width: 100%;background-color: #000;color: #fff;padding: 20px;text-align: center; display: flex;justify-content: center;}
+	
+	/***** AQUI MEDIA QUERY PARA TAMAÑOS DE HASTA 1024 *******/
+	@media (max-width: 1024px) {
+		.logo{
+			display:block;
+			justify-content: center;
+		}
+		.el-logo{
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+		.el-logo img{
+			width: 20%;
+		}
+	}
+	
+	/***** AQUI MEDIA QUERY PARA TAMAÑOS DE HASTA 800px *******/
+	@media (max-width: 800px) {
+		.banner1{
+			display: none;
+		}
+		.oculto{
+			display: flex; 
+			height: 400px; 
+			width:15%; 
+			background-color: #858585; 
+			color:#FFF; 
+			align-items: center; 
+			justify-content: center; 
+			float: left;
+			width: 50%;
+		}
+		.contenido{
+			width: 100%;
+		}
+		.banner2{
+			width: 50%;
+		}
+		.etiqueta-h1{
+			width: 100%;
+			text-align: center;
+			font-size: 48px;
+		}
+	}
+
+	/***** PARA TAMAÑOS HASTA 480px ******/
+	@media (max-width: 480px) {
+		.el-logo img{
+			width: 45%;
+		}
+		.oculto{
+			width: 100%;
+			height: 200px;
+		}
+		.banner2{
+			width: 100%;
+			height: 200px;
+		}
+	}
+
+</style>
+	
+<body>
+	<header>
+	    <div class="top"> contenido de la capa top</div>
+		<div class="logo">
+		    <div class="el-logo"><img alt="img logo" src="https://www.ingeniovirtual.com/wp-content/uploads/caracteristicas-de-un-logotipo-moderno.jpg"/> </div>
+			<div class="etiqueta-h1">CONTENIDO ETIQUETA H1</div>
+		</div>
+		<nav> AQUI VA EL MENÚ</nav>
+	</header>
+	<main>
+		<div class="banner1">BANNER 1</div>
+		<div class="contenido">CONTENIDO</div>
+		<div class="banner1 oculto">BANNER 1</div>
+		<div class="banner2">BANNER 2</div>
+	</main>
+	<footer>
+	    CONTENIDO DEL FOOTER
+	</footer>
+</body>
+</html>

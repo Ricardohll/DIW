@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejercicio 2</title>	
+</head>
+	
+<style>
+	*{margin: 0; border: 0; padding: 0; box-sizing: border-box; font-family: verdana;}
+	/*BARRA SUPERIOR*/
+	.contactos{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: div div div;
+		background-color: black;
+		color:white;
+	}
+	.contacto{
+		text-align: center;
+	}
+	/*logo*/
+	.logo_div{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+	.logo{
+		width: 300px;
+	}
+	/*menu*/
+	.menu{
+		width: 100%;
+		background-color: black;
+		color: white;
+	}
+	.lista{
+		display: flex;
+		justify-content: center;
+		list-style: none;
+	}
+	li{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	/* BANNER CON H1*/
+	.banner{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		width: 100%;
+		background-image: url(fondo.jpg);
+		background-size: 100%;
+	}
+	.etiqueta_h1{
+		text-align: center;
+	}
+	/*SECCION TEXTO*/
+	h2{
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	p{
+		text-align: left;
+	}
+	section{
+		width: 1200px;
+		margin-top: 50px;
+		margin-left: 6%;
+		margin-right: 7%;
+	}
+
+	/*SECCION LISTADO PRODUCTO*/
+	.grid_productos{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: grid_item grid_item grid_item grid_item;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	.grid_item{
+		background-color: black;
+		color:white;
+	}
+	.imagen_div{
+		display: flex;
+		justify-content: center;
+		margin: 20px;
+	}
+	.img_produc{
+		width: 100%;
+	}
+	.product_text{
+		margin: 20px;
+	}
+
+	/*FOOTER*/
+	footer{
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		margin-top: 40px;
+		background-color: black;
+		color: white;
+		text-align: center;
+	}
+
+	/***** AQUI MEDIA QUERY PARA TAMAÑOS DE HASTA 1024 *******/
+	@media (max-width: 1024px) {
+		section{
+			width: 970px;
+			margin-left: 3%;
+			margin-right: 3%;
+		}
+		.grid_productos{
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: grid_item grid_item grid_item;
+			column-gap: 10px;
+			row-gap: 10px;
+		}
+	}
+	
+	/***** AQUI MEDIA QUERY PARA TAMAÑOS DE HASTA 800px *******/
+	@media (max-width: 800px) {
+		section{
+			width: 750px;
+		}
+		.grid_productos{
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: grid_item grid_item;
+		}
+	}
+
+	/***** PARA TAMAÑOS HASTA 480px ******/
+	@media (max-width: 480px) {
+		section{
+			width: 455px;
+		}
+		.grid_productos{
+			grid-template-columns: 1fr;
+			grid-template-areas: grid_item;
+		}
+		li{
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.contactos{
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: contacto contacto;
+		}
+	}
+</style>
+	
+<body>
+	<header>
+		<!--- BARRA SUPERIOR --->
+	    <div class="contactos">
+			<div class="contacto">Tel: 999 999 999</div>
+		    <div class="contacto">info@examendiw.com</div>
+			<div class="contacto">Horario: 15:00 - 17:00</div>		
+		</div>
+		<!-- LOGO -->
+		<div class="logo_div"><img class="logo" src="logo.jpg"/></div>
+		
+		<!-- MENU -->
+		<nav class="menu">
+		<ul class="lista">
+			<li>MENU 1</li>
+			<li>MENU 2</li>
+			<li>MENU 3</li>
+			<li>MENU 4</li>
+		</ul>
+		</nav>
+	</header>
+	
+	<main>
+		
+<!-- BANNER CON H1 -->
+		
+	<div class="banner"><h1 class="etiqueta_h1">Ejercicio 2<br> Examen DIW</h1>
+	</div>
+
+<!-- SECCION TEXTO -->
+	<section> 
+		<div>
+		<h2 class="etiqueta_h2">LOREM IPSUM DOLOR</h2>
+		<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+		</div>
+	</section>
+		
+<!-- SECCION LISTADO PRODUCTO -->
+	<section> 
+	    <div class="grid_productos">
+			 <div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				 <div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				 <div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			 </div>
+			 <div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+			<div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+			<div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+			<div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+			<div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+			<div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+			<div class="grid_item"> <!--- una vez maquetado este solo tenéis que copiar y pegar -->
+				<div class="imagen_div"><img class="img_produc" src="icono.png"></div>
+				<div class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+			</div>
+		</div>
+	</section>
+	</main>
+	
+<!-- FOOTER -->
+	<footer>
+	    Este es el footer de la pregunta dos del examen
+	</footer>
+</body>
+</html>
